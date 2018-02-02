@@ -4,7 +4,7 @@ class Main(object):
         self.do_something()
 
     def do_something(self):
-        print "hello, World!"
+        print "Hello, World!"
 
 
 if __name__ == "__main__":
