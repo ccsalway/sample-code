@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 
 # install python setuptools
-apt-get install python-setuptools
+sudo apt-get install -y python-setuptools
