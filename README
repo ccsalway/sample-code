@@ -1,0 +1,2 @@
+# to run tests and generate JUnit XML file
+nosetests --with-xunit
