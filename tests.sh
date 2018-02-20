@@ -14,4 +14,4 @@ python -m nose tests/*.py \
     --cover-html --cover-html-dir=reports/coverage
 
 # convert nosetest xml from mini to expanded
-xmllint --format reports/junit.min.xml > reports/junit.xml
+#xmllint --format reports/junit.min.xml > reports/junit.xml

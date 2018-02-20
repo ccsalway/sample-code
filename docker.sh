@@ -3,9 +3,6 @@
 # exit on first non-zero exit code
 set -ex
 
-# cleanup
-docker rmi app/sample-code
-
 # build image
 docker build . -t app/sample-code
 
