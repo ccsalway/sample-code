@@ -1,7 +1,7 @@
-#!/bin/sh -ex
+#!/bin/sh
 
 # exit on first non-zero exit code
-#set -ex -o pipefail
+set -ex
 
 # create directory
 mkdir -p reports
