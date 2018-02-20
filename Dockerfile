@@ -4,8 +4,8 @@ WORKDIR /usr/src/app
 
 COPY . /usr/src/app
 
-RUN pip install -U \
-    setuptools \
-    libxml2-utils
+RUN apt-get install libxml2-utils
+
+RUN pip install -U setuptools
 
 RUN python setup.py install --user
