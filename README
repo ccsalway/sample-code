@@ -1,6 +1,9 @@
+# install dependencies
+apt-get install python-setuptools
+easy_install pip
 
 # to install dependencies
-python setup.py install
+python setup.py install --user
 
 # to run tests and generate JUnit XML file
 nosetests --with-xunit
