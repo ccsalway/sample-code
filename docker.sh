@@ -3,6 +3,9 @@
 # exit on first non-zero exit code
 set -ex
 
+# cleanup
+docker rmi app/sample-code
+
 # build image
 docker build . -t app/sample-code
 
@@ -13,6 +16,3 @@ docker run --rm \
 
 # run app
 docker run --rm -i --entrypoint python app/sample-code entry.py
-
-# cleanup
-docker rmi app/sample-code
