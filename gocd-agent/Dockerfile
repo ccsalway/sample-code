@@ -1,5 +1,7 @@
 FROM gocd/gocd-agent-ubuntu-16.04:v18.1.0
 
+# install docker
+
 RUN apt-get update
 
 RUN apt-get install -y \
