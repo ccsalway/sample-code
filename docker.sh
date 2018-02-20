@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
+echo "Pipeline: ${GO_PIPELINE_NAME}"
+
 # build image
 docker build . -t app/sample-code
-
-echo pwd
 
 # run tests
 docker run --rm -v /tmp/reports:/usr/src/app/reports --entrypoint python app/sample-code -m nose --with-xunit --xunit-file=reports/nosetests.xml
