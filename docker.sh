@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 # exit on first non-zero exit code
 set -ex -o pipefail
