@@ -1,4 +1,5 @@
 def main():
+    exit(2)
     return "Hello, World!"
 
 
