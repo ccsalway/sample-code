@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-apt-get install python-setuptools
+sudo apt-get install python-setuptools
