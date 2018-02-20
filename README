@@ -1,2 +1,6 @@
+
+# to install dependencies
+python setup.py install
+
 # to run tests and generate JUnit XML file
 nosetests --with-xunit
