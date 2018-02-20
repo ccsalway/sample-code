@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# exit on first non-zero exit code
+set -ex -o pipefail
+
 # build image
 docker build . -t app/sample-code
 
