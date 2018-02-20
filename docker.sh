@@ -13,3 +13,6 @@ docker run --rm \
 
 # run app
 docker run --rm -i --entrypoint python app/sample-code entry.py
+
+# cleanup
+docker rmi app/sample-code
