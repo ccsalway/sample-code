@@ -1,7 +1,10 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # exit on first non-zero exit code
 set -ex
+
+# change to parent directory
+cd ..
 
 # create directory
 mkdir -p reports
@@ -12,6 +15,3 @@ python -m nose tests/*.py \
     --with-coverage --cover-branches --cover-inclusive --cover-tests \
     --cover-xml --cover-xml-file=reports/coverage.xml \
     --cover-html --cover-html-dir=reports/coverage
-
-# convert nosetest xml from mini to expanded
-#xmllint --format reports/junit.min.xml > reports/junit.xml
