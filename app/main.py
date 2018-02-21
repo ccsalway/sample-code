@@ -1,4 +1,6 @@
 def main():
+    if 1 == 2:
+        return "inner"
     return "Hello, World!"
 
 
