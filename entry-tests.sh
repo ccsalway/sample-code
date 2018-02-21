@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # information only
-echo "Coverage minimum pass rate (%): ${COVER_MIN_PCT}"
+echo "Coverage minimum pass rate: ${COVER_MIN_PCT}%"
 
 # create directory
 mkdir -p reports
