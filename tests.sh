@@ -7,14 +7,14 @@ mkdir -p reports
 python -m nose tests/*.py \
     --with-xunit --xunit-file=reports/junit.min.xml \
     --with-coverage --cover-branches --cover-inclusive --cover-tests \
-    --cover-min-percentage=100 \
+    --cover-min-percentage=${COVER_MIN_PCT} \
     --cover-xml --cover-xml-file=reports/coverage.xml \
     --cover-html --cover-html-dir=reports/coverage
 
 # store exit code so xmllint can be run
 ec=$?
 
-# convert junit from mini to expanded
+# convert junit from mini to expanded for GOCD compatibility
 xmllint --format reports/junit.min.xml > reports/junit.xml
 
 exit ${ec}
