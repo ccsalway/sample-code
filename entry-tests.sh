@@ -15,9 +15,9 @@ python -m nose tests/*.py \
     --cover-html --cover-html-dir=reports/coverage
 
 # store exit code so xmllint can be run
-ec=$?
+#ec=$?
 
 # convert junit from mini to expanded for GOCD compatibility
-xmllint --format reports/junit.min.xml > reports/junit.xml
+#xmllint --format reports/junit.min.xml > reports/junit.xml
 
-exit ${ec}
+#exit ${ec}
