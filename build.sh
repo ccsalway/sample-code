@@ -23,7 +23,7 @@ mv -- setup.new setup.py
 ########## BUILD
 
 # build docker
-docker build --rm . -t ${DOCKER_TAG}
+docker build . -t ${DOCKER_TAG}
 
 # remove dangling images <none>
 #docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
