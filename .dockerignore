@@ -1,4 +1,7 @@
 .git/
 .idea/
 venv/
-setup.sh
+build/
+dist/
+/*.egg-info
+build.sh
