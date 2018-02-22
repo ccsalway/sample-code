@@ -10,7 +10,10 @@ setup(
     author='Christian Salway',
     packages=find_packages(),
     install_requires=[
-        'cyrm_common', 'cyrm_python_tools_framework', 'nose', 'coverage', 'pylint'
+        # this first line should be in all tools
+        'cyrm_common', 'cyrm_python_tools_framework', 'nose', 'coverage', 'pylint',
+        # add extra packages below
+        # requests, dnspython, ...
     ],
     dependency_links=[
         scm + "cyrm_common/master#egg=cyrm_common",
