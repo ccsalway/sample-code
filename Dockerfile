@@ -10,4 +10,4 @@ RUN pip install -U setuptools
 
 RUN python setup.py install --user
 
-ENTRYPOINT["python", "entry.py"]
+ENTRYPOINT ["python", "entry.py"]

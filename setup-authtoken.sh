@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 # IMPORTANT: This file should be listed in .dockerignore
+echo "Current Working Directory: ${PWD}"
 
 # request access token (valid for 1hr)
 RESP=$(curl -s -X POST https://bitbucket.org/site/oauth2/access_token \
