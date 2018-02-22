@@ -1,6 +1,6 @@
 FROM python:2.7-alpine
 
-RUN apk update && apk add --no-cache gcc git libxml2-utils musl-dev postgresql-dev
+RUN apk update && apk add --no-cache bash gcc git libxml2-utils musl-dev postgresql-dev
 
 WORKDIR /usr/src/app
 

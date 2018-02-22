@@ -3,7 +3,7 @@
 # information only
 echo "Coverage minimum pass rate: ${COVER_MIN_PCT}%"
 
-# create directory
+# ensure directory exists
 mkdir -p reports
 
 # run unit-tests and coverage

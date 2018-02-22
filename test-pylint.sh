@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 
-set -x
-
-# create directory
+# ensure directory exists
 mkdir -p reports
 
 # run pylint and output results to a report file
