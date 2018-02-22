@@ -9,7 +9,9 @@ setup(
     description='Sample Code for learning',
     author='Christian Salway',
     packages=find_packages(),
-    install_requires=['nose', 'coverage', 'pylint', 'cyrm_common', 'cyrm_python_tools_framework'],
+    install_requires=[
+        'cyrm_common', 'cyrm_python_tools_framework', 'nose', 'coverage', 'pylint'
+    ],
     dependency_links=[
         scm + "cyrm_common/master#egg=cyrm_common",
         scm + "cyrm_python_tools_framework/master#egg=cyrm_python_tools_framework"

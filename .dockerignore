@@ -1,7 +1,9 @@
 .git/
 .idea/
 venv/
+reports/
 build/
 dist/
 /*.egg-info
+.coverage
 build.sh
