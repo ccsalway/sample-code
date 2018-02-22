@@ -4,7 +4,7 @@ WORKDIR /usr/src/app
 
 COPY . /usr/src/app
 
-RUN apk update && apk add libxml2-utils
+RUN apk update && apk add libxml2-utils gcc
 
 RUN pip install -U setuptools
 
