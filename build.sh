@@ -4,7 +4,7 @@
 
 # debugging use only
 echo "Current Working Directory: ${PWD}"
-ls -l
+ls -la
 
 ###### BITBUCKET AUTH TOKEN
 
@@ -17,10 +17,13 @@ RESP=$(curl -s -X POST https://bitbucket.org/site/oauth2/access_token \
 TOKEN=$(python -c "import sys, json; print json.loads(sys.argv[1])['access_token']" "${RESP}")
 
 # replace TOKEN in setup.py
-sed -i "s|auth = ''|auth = 'x-token-auth:${TOKEN}@'|" ./setup.py
+sed -i '' "s|auth = ''|auth = 'x-token-auth:${TOKEN}@'|" ./setup.py
 
 
 ########## BUILD
+
+# tag latest to previous
+docker tag ${DOCKER_TAG}:latest ${DOCKER_TAG}:previous
 
 # build docker
 docker build . -t ${DOCKER_TAG}
