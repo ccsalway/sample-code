@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -ex
+set -x
 
 # run pylint and output results to a report file
 python -m pylint --msg-template="{path}[{line},{column}]: {msg} ({msg_id}:{symbol})" $(find app -name "*.py") > reports/pylint.txt
