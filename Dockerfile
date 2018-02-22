@@ -1,10 +1,10 @@
 FROM python:2.7-alpine
 
+RUN apk update && apk add --no-cache gcc git libxml2-utils musl-dev postgresql-dev
+
 WORKDIR /usr/src/app
 
 COPY . /usr/src/app
-
-RUN apk update && apk add libxml2-utils gcc git
 
 RUN pip install -U setuptools
 

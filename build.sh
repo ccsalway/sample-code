@@ -16,14 +16,14 @@ RESP=$(curl -s -X POST https://bitbucket.org/site/oauth2/access_token \
 # extract token
 TOKEN=$(python -c "import sys, json; print json.loads(sys.argv[1])['access_token']" "${RESP}")
 
-# replace TOKEN in setup.py
-sed -i '' "s|auth = ''|auth = 'x-token-auth:${TOKEN}@'|" ./setup.py
-
+# replace TOKEN in setup.py (GNU/BSD compatible method, as opposed to using -i '')
+sed -e "s|auth = .*$|auth = 'x-token-auth:${TOKEN}@'|" setup.py > setup.new
+mv -- setup.new setup.py
 
 ########## BUILD
 
-# tag latest to previous
-docker tag ${DOCKER_TAG}:latest ${DOCKER_TAG}:previous
-
 # build docker
 docker build . -t ${DOCKER_TAG}
+
+# remove dangling images <none>
+docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
