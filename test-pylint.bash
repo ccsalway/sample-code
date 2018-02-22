@@ -7,5 +7,4 @@ mkdir -p reports
 python -m pylint --msg-template="{path}[{line},{column}]: {msg} ({msg_id}:{symbol})" $(find app -name "*.py") > reports/pylint.txt
 
 # we only want to alert on errors and fatal
-ec=$?
-(( 3 & ${ec} )) && exit ${ec} || exit 0
+ec=$?; (( 3 & ${ec} )) && exit ${ec} || exit 0

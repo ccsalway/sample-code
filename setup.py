@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-auth = 'x-token-auth:KQmv4sMLHVf3t6sKaUpD8SirX7iA59U1jGEhvkEWNlJgKVlQlIJx76wydAc9jrhnhqd-PXlMom1KXgmguuw=@'
+auth = ''
 scm = "git+https://%sbitbucket.org/naimuri/" % auth
 
 setup(
