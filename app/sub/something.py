@@ -1,2 +1,3 @@
 """something"""
-$
+
+print "something"
