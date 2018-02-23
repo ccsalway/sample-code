@@ -1,3 +1,4 @@
+_docker/
 .DS_STORE
 .idea/
 venv/
