@@ -1,8 +1,17 @@
-.DS_STORE
+# OSX
+.DS_Store
+
+# pycharm
 .idea/
+
+# virtual environments
 venv/
+
+# build files/folders
 build/
 dist/
+*.egg-info/
+
+# run files/folders
 reports/
-*.egg-info
 .coverage
