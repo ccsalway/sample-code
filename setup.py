@@ -1,22 +1,23 @@
 from setuptools import setup, find_packages
 
-auth = ''
-scm = "git+https://%sbitbucket.org/naimuri/" % auth
+AUTH = ''
+BITBUCKET_REPO = 'git+https://%sbitbucket.org/naimuri/' % AUTH
+
+NAIMURI_DEPENDENCIES = {
+    'cyrm_common': 'cyrm_common',
+    'cyrm_python_tools_framework': 'cyrm_python_tools_framework'
+}
 
 setup(
     name='sample-code',
-    version='1.0',
+    version='1.0.0',
     description='Sample Code for learning',
     author='Christian Salway',
     packages=find_packages(),
-    install_requires=[
-        # this first line should be in all tools
-        'cyrm_common', 'cyrm_python_tools_framework', 'nose', 'coverage', 'pylint',
-        # add extra packages below
-        # requests, dnspython, ...
+    install_requires=NAIMURI_DEPENDENCIES.values() + [
+        'nose', 'coverage', 'pylint'
     ],
     dependency_links=[
-        scm + "cyrm_common/master#egg=cyrm_common",
-        scm + "cyrm_python_tools_framework/master#egg=cyrm_python_tools_framework"
+        BITBUCKET_REPO + repo + '/gocd#egg=' + egg for repo, egg in NAIMURI_DEPENDENCIES.iteritems()
     ]
 )
