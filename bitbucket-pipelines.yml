@@ -2,18 +2,11 @@ image: python:2.7-alpine
 pipelines:
   default:
     - step:
-      name: Setup environment
-      script:
-        - apk update && apk add --no-cache bash gcc git libxml2-utils musl-dev postgresql-dev
-    - step:
-      name: Build
-      script:
-        - pip install -U setuptools
-        - python setup.py install --user
-    - step:
-      name: Test
-      script:
-        - bash test-nosetest.sh
-        - bash test-pylint.sh
-      artifacts:
-        - reports/**
+        script:
+          - apk update && apk add --no-cache bash gcc git libxml2-utils musl-dev postgresql-dev
+          - pip install -U setuptools
+          - python setup.py install --user
+          - bash test-nosetest.sh
+          - bash test-pylint.sh
+        artifacts:
+          - reports/**
