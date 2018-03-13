@@ -4,6 +4,7 @@ pipelines:
     - step:
         script:
           - apk update && apk add --no-cache bash gcc git libxml2-utils musl-dev postgresql-dev
+          - bash ./build-scripts/set-bitbucket-authkey.sh
           - pip install -U setuptools
           - python setup.py install --user
           - bash test-nosetest.sh
